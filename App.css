@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fafafa;
+  color: #010101;
+}
+
+a {
+  text-decoration: none;
+  color: #010101;
+}
+
+ul {
+  list-style: none;
+}
+
+.nav {
+  padding: 1.5rem 6rem;
+}
+
+.nav .nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav .nav-wrapper .burger-menu {
+  display: none;
+}
+
+.nav .nav-wrapper .nav-link {
+  display: flex;
+}
+
+.nav .nav-wrapper .nav-link .nav-link-item {
+  overflow: hidden;
+  padding: 0 4px;
+  height: auto;
+  margin-left: 1rem;
+  position: relative;
+}
+
+.nav .nav-wrapper .nav-link .nav-link-item:hover .nav-btn {
+  color: red;
+  transform: translateY(-100%);
+}
+
+.nav .nav-wrapper .nav-link .nav-link-item .nav-btn {
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0, 1.07, 0.89, 0.99);
+}
+
+.nav .nav-wrapper .nav-link .nav-link-item .nav-btn.animate {
+  position: absolute;
+  top: 100%;
+  left: 4px;
+}
+
+.nav .menu-responsive {
+  display: none;
+}
+
+.nav .bg-dimming {
+  display: none;
+}

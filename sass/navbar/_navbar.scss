@@ -1,0 +1,54 @@
+// Main Nav
+.nav {
+  padding: 1.5rem 6rem;
+}
+
+// Nav Wrapper
+.nav .nav-wrapper {
+  .burger-menu {
+    display: none;
+  }
+
+  display: flex;
+  justify-content: space-between;
+
+  .nav-link {
+    display: flex;
+
+    .nav-link-item {
+      overflow: hidden;
+      padding: 0 4px;
+      height: auto;
+      margin-left: 1rem;
+      position: relative;
+
+      &:hover {
+        .nav-btn {
+          color: red;
+          transform: translateY(-100%);
+        }
+      }
+
+      .nav-btn {
+        display: inline-block;
+        transition: transform 0.5s cubic-bezier(0, 1.07, 0.89, 0.99);
+      }
+
+      .nav-btn.animate {
+        position: absolute;
+        top: 100%;
+        left: 4px;
+      }
+    }
+  }
+}
+
+// Menu Responsive
+.nav .menu-responsive {
+  display: none;
+}
+
+// BG Dimming
+.nav .bg-dimming {
+  display: none;
+}
