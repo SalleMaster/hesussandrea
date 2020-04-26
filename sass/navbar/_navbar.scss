@@ -4,6 +4,7 @@
   position: fixed;
   width: 100vw;
   z-index: 1000;
+  font-weight: 410;
 }
 
 // Nav Wrapper
@@ -15,6 +16,7 @@
 
   .nav-logo {
     z-index: 100;
+    cursor: default;
   }
 
   display: flex;
