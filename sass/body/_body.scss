@@ -10,6 +10,13 @@ body {
   font-family: 'Montserrat', sans-serif;
   background: #fafafa;
   color: #010101;
+  line-height: 1.5;
+  transition-duration: 0.3s;
+
+  &.dark {
+    background: #010101;
+    color: #fafafa;
+  }
 }
 
 a {

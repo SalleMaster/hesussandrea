@@ -1,0 +1,30 @@
+.marquee {
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  max-width: 70px;
+  overflow: hidden;
+  cursor: default;
+
+  .marquee-wrap {
+    display: inline-block;
+
+    .marquee-title {
+      display: flex;
+      max-width: 50px;
+
+      .w-title {
+        text-decoration: underline;
+        text-transform: uppercase;
+        white-space: nowrap;
+        animation: marqueeSlider 7s linear infinite;
+        margin: 0 0.2rem;
+      }
+    }
+  }
+}
+
+@keyframes marqueeSlider {
+  100% {
+    transform: translateX(-100%);
+  }
+}
