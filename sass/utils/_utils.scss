@@ -1,7 +1,6 @@
 .marquee {
   font-size: 0.8rem;
   margin-bottom: 2rem;
-  max-width: 70px;
   overflow: hidden;
   cursor: default;
 
@@ -10,14 +9,23 @@
 
     .marquee-title {
       display: flex;
-      max-width: 50px;
+      min-width: 100px;
+      min-height: 20px;
+      position: relative;
+      overflow: hidden;
 
       .w-title {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
         text-decoration: underline;
         text-transform: uppercase;
         white-space: nowrap;
         animation: marqueeSlider 7s linear infinite;
         margin: 0 0.2rem;
+        transform: translateX(100%);
       }
     }
   }
@@ -26,5 +34,12 @@
 @keyframes marqueeSlider {
   100% {
     transform: translateX(-100%);
+  }
+}
+
+// Dark Theme
+#body.dark {
+  .marquee {
+    color: $light;
   }
 }

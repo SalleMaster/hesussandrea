@@ -3,6 +3,15 @@
   height: 100vh;
 }
 
+// Dark Theme
+#body.dark {
+  #hero {
+    .cta-link {
+      color: #fff;
+    }
+  }
+}
+
 #hero .container {
   height: 100%;
 }

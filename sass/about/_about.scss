@@ -3,6 +3,19 @@
   margin-top: 1px;
 }
 
+// Dark Theme
+#body.dark {
+  #about {
+    .social-links {
+      .social-links-wrapper {
+        .social-link {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
 #about .intro {
   overflow: hidden;
 

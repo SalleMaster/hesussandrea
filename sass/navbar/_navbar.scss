@@ -7,6 +7,26 @@
   font-weight: 410;
 }
 
+// Dark Theme
+#body.dark {
+  .nav-link-item {
+    .nav-btn {
+      color: #fff;
+    }
+
+    .animate {
+      color: $red;
+    }
+  }
+
+  .burger-menu {
+    .burger-menu-top,
+    .burger-menu-bottom {
+      background: $light;
+    }
+  }
+}
+
 // Nav Wrapper
 .nav .nav-wrapper {
   .burger-menu {

@@ -13,14 +13,14 @@ menuItemWrap.forEach((item) => item.addEventListener('click', toggleNav));
 
 // Intersection Observer
 const body = document.querySelector('#body');
-const about = document.querySelector('#work');
+const hero = document.querySelector('#hero');
 
-const observer = new IntersectionObserver((entries) => {
-  if (entries[0].isIntersecting) {
+const heroObserver = new IntersectionObserver((entries) => {
+  if (!entries[0].isIntersecting) {
     body.classList.add('dark');
   } else {
     body.classList.remove('dark');
   }
 });
 
-observer.observe(about);
+heroObserver.observe(hero);

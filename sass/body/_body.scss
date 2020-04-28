@@ -6,22 +6,32 @@
   padding: 0;
 }
 
+// Colors
+$dark: #010101;
+$white: #fafafa;
+$red: #e64d43;
+$light: #d7c9c2;
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #fafafa;
-  color: #010101;
+  background: $white;
+  color: $dark;
   line-height: 1.5;
   transition-duration: 0.3s;
 
   &.dark {
-    background: #010101;
-    color: #fafafa;
+    background: $dark;
+    color: $white;
   }
 }
 
 a {
   text-decoration: none;
-  color: #010101;
+  color: $dark;
 }
 
 ul {
