@@ -45,7 +45,7 @@ img {
 
 @media (min-width: 540px) {
   .container {
-    padding: 0 3rem;
+    padding: 0 4rem;
   }
 }
 
@@ -534,12 +534,25 @@ img {
   color: #d7c9c2;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20%);
+  transition: opacity 200ms ease-in, transform 500ms ease-in;
+}
+
+.fade-in.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (min-width: 750px) {
   #work .work-grid {
     grid-template-columns: 1fr 1fr;
   }
-  #work .work-grid .item:nth-of-type(even) {
-    transform: translateY(10%);
+  .fade-in.animate:nth-of-type(even) {
+    opacity: 1;
+    transition-delay: 200ms;
+    transform: translateY(5%);
   }
 }
 
@@ -683,6 +696,34 @@ img {
   transform: translateX(100%);
 }
 
+#honors {
+  position: fixed;
+  top: 50vh;
+  right: 0;
+  z-index: 20;
+  background: #010101;
+  color: #fafafa;
+  padding: 0.5rem 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+#honors .honors-w {
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#honors .honors-honors {
+  transform: rotate(-90deg);
+  padding: 1.5rem 0;
+  font-size: 0.5rem;
+}
+
 @keyframes marqueeSlider {
   100% {
     transform: translateX(-100%);
@@ -691,4 +732,19 @@ img {
 
 #body.dark .marquee {
   color: #d7c9c2;
+}
+
+@media (min-width: 540px) {
+  #honors {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1000px) {
+  #honors .honors-w {
+    font-size: 1.5rem;
+  }
+  #honors .honors-honors {
+    font-size: 0.8rem;
+  }
 }

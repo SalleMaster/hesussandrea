@@ -31,6 +31,34 @@
   }
 }
 
+#honors {
+  position: fixed;
+  top: 50vh;
+  right: 0;
+  z-index: 20;
+  background: $dark;
+  color: $white;
+  padding: 0.5rem 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  transform: translateY(-50%);
+  opacity: 0;
+
+  .honors-w {
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .honors-honors {
+    transform: rotate(-90deg);
+    padding: 1.5rem 0;
+    font-size: 0.5rem;
+  }
+}
+
 @keyframes marqueeSlider {
   100% {
     transform: translateX(-100%);
@@ -41,5 +69,24 @@
 #body.dark {
   .marquee {
     color: $light;
+  }
+}
+
+// Responsive Media Queries
+@media (min-width: 540px) {
+  #honors {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1000px) {
+  #honors {
+    .honors-w {
+      font-size: 1.5rem;
+    }
+
+    .honors-honors {
+      font-size: 0.8rem;
+    }
   }
 }

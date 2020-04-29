@@ -12,6 +12,8 @@ burgerMenu.addEventListener('click', toggleNav);
 menuItemWrap.forEach((item) => item.addEventListener('click', toggleNav));
 
 // Intersection Observer
+
+// Dark & White Theme Change
 const body = document.querySelector('#body');
 const hero = document.querySelector('#hero');
 
@@ -24,3 +26,28 @@ const heroObserver = new IntersectionObserver((entries) => {
 });
 
 heroObserver.observe(hero);
+
+// Fade In Animation
+const fadeIn = document.querySelectorAll('.fade-in');
+
+const fadeinOptions = {
+  // root: document.querySelector('#scrollArea'),
+  rootMargin: '0px',
+  threshold: 0.1,
+};
+
+const fadeInCallback = (entries, fadeInObserver) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add('animate');
+    }
+  });
+};
+
+const fadeInObserver = new IntersectionObserver(fadeInCallback, fadeinOptions);
+
+fadeIn.forEach((fade) => {
+  fadeInObserver.observe(fade);
+});
